@@ -1,0 +1,54 @@
+/* font */
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
+/* reset */
+html {font-size:16px}
+html,body {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p, a, span, em, strong, del, s, b, blockquote, br, i, u, dl, dt, dd, table, tr, thead, tbody, tfoot, th, td, img, object, form, fieldset, label, input, textarea, select, option, button, header, main, section, aside, footer, nav, article, div, ol, ul, li, pre {padding: 0; margin: 0; font-family: 'Pretendard',sans-serif; letter-spacing: -0.01rem; line-height: 1; font-weight: normal; font-size: 1rem; color:#333; box-sizing: border-box; word-break: keep-all;}
+
+/* 태그속성 지우기 */
+a, del, s, u {text-decoration: none;}
+em, i {font-style:normal}
+ol, ul, li {list-style:none;}
+table, tr, td {border-collapse:unset;}
+input {border:0; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+input[type='number'] {-moz-appearance: textfield;}
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {display: none;}
+input::-ms-clear { display: none; }
+select {-webkit-appearance: none;-moz-appearance: none; appearance: none;}
+select::-ms-expand { display: none; }
+button {cursor:pointer; background: none; border:0;}
+pre { white-space: pre-line;}
+
+/* IOS 선택 비활성화 */
+h1, h2, h3, h4, h5, h6, p, div, img, span, a, em {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+/* 클래스 속성 */
+.hide {display: none;}
+
+/* 반응형 */
+@media screen and (max-width:768px) {
+	html {font-size: 10px}
+}
+
+
+/*
+    1. 메인폰트 및 포인트 폰트 import형식으로 가져와 font에 넣기
+    https://wess.tistory.com/category
+    2. font-family의 ''에 메인 폰트 넣기
+    3. 반응형 에 font-size가 10px인지 확인하기
+*/
