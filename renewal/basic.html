@@ -11,33 +11,36 @@
         <thead>
             <tr>
                 <th scope="col">이론</th>
-                <th scope="col" rowspan="2">설명</th>
+                <th scope="col" colspan="2">설명</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="col">세미콜론</th>
+                <th scope="row">세미콜론</th>
                 <td>명령어의 끝 마다 작성해주는 종결어미 [;]</td>
                 <td><img src="/img/semicolon.png" alt="세미콜론"></td>
             </tr>
             <tr>
-                <th scope="col">주석</th>
+                <th scope="row">주석</th>
                 <td>설명 주석 : 해당 스크립트의 설명을 작성</td></br>변수 주석 : 변수를 주석해서 필요할 때 사용하는 방법</td>
                 <td><img src="/img/note.png" alt="주석"></td>
             </tr>
+            <tr>
+                <th scope="row">따옴표</th>
+                <td>문자열을 사용할때 많이 사용, '' 혹은 "" 그리고 ``를 사용한다. 단 "문자"안의"문자"는 "문자'안의'문자" 혹은 "문자\"안의\"문자"로 사용해야합니다. 동일 따옴표는 사용 불가능</td>
+                <td><img src="/img/quotes.png" alt=""></td>
+            </tr>
+            
         </tbody>
     </table>
     <script>
-        //const title = "dung's study"; //변수 주석처리
-        const title = "free dungdung";
-        //한줄 주석입니다. 
-        /*
-            여러줄 주석입니다.
-            다양하게 의견을 적어주시면 됩니다.
-        */
-        const script = /*
-            이렇게 여러줄 주석을 사용할 경우에는 변수사이에도 넣을 수 있습니다.
-        */ 'script 좋아';
+        console.log("문자안의문자");
+        console.log('문자안의문자');
+        
+        console.log('dung's study'); // 에러
+        console.log("dung's study");
+        console.log('dung\'s study'); //올바른 사용 예시
+
     </script>
 </body>
 </html>
