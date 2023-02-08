@@ -1,0 +1,10 @@
+#wrap {display: flex; flex-flow: column; justify-content: center; align-items: center; width: 90%; max-width: 360px; min-height: 80vh; margin: 5rem auto;}
+#wrap h1 {}
+#wrap .numberZone {display: flex;}
+#wrap .numberZone .number {display: block; width: 3rem; height: 3rem; 
+line-height: 3rem; text-align: center; border-radius:50%; border: 1px solid #000; color:#fff;}
+#wrap .numberZone .number.red {background: linear-gradient(90deg, #ff2e3eb5 0%, #ff2e3eb5 10%, #fdaaaa 45%, #fdaaaa 55%, #ff2e3eb5 90%, #ff2e3eb5 100% );}
+#wrap .numberZone .number.yellow {background: linear-gradient(90deg, #ffd22eb5 0%, #ffd22eb5 10%, #cea30f 45%, #cea30f 55%, #ffd22eb5 90%, #ffd22eb5 100% );}
+#wrap .numberZone .number.green {background: linear-gradient(90deg, #2eff62b5 0%, #2eff62b5 10%, #33bc51 45%, #33bc51 55%, #2eff62b5 90%, #2eff62b5 100% );}
+#wrap .numberZone .number.blue {background: linear-gradient(90deg, #2e66ffb5 0%, #2e66ffb5 10%, #aab2fd 45%, #aab2fd 55%, #2e66ffb5 90%, #2e66ffb5 100% );}
+#wrap .numberZone .number.gray {background: linear-gradient(90deg, #424242b5 0%, #424242b5 10%, #898989 45%, #898989 55%, #424242b5 90%, #424242b5 100% );}
