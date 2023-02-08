@@ -79,9 +79,10 @@ function settingFct(){ //참여자setting function
         t.childNodes[0].innerText = 'player'+ (i+1);
     });
     name.forEach(function(t,i){
-        console.log(t.childNodes[1]);
+        //console.log(t.childNodes[1]);
         t.childNodes[1].setAttribute('type','text');
         t.childNodes[1].setAttribute('name','name'+i);
         t.childNodes[1].setAttribute('id','name'+i);
-    })    
+    })
+    persons.setAttribute('readonly', true);
 }
