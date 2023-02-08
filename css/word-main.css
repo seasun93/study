@@ -1,4 +1,4 @@
-#wrap {max-width: 360px; max-height: 720px; margin: 5rem auto; display: flex; flex-flow: column; border-radius: 1rem; border:1px solid #ccc; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);}
+#wrap {max-width: 360px; width: 90%; max-height: 720px; margin: 5rem auto; display: flex; flex-flow: column; border-radius: 1rem; border:1px solid #ccc; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);}
 #wrap > * {padding: 2rem;}
 #wrap #wordWrap {}
 #wrap #wordWrap h1 {font-size: 3rem; font-weight: 800;line-height: 6rem; height: 6rem; text-align: center;}
