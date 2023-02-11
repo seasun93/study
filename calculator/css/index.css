@@ -1,0 +1,10 @@
+#wrap {display: flex; flex-flow: column; align-items: center;}
+#wrap h1 {font-size: 3rem ;line-height: 1;}
+#wrap #calculator {display: flex; flex-flow: column;}
+#wrap #calculator .viewZone {display: flex;height: 5rem;padding: 0.5rem;}
+#wrap #calculator .viewZone > * {border: 1px solid #ccc;margin: 0.5rem;}
+#wrap #calculator .viewZone #operator {width: 25%; text-align: center;}
+#wrap #calculator .viewZone #result {width: 75%;text-align: right;padding: 1rem;}
+#wrap #calculator .calcZone {display: flex; flex-flow: column; padding: 0.5rem;}
+#wrap #calculator .calcZone .row {display: flex;}
+#wrap #calculator .calcZone .row button {width: 25%; line-height: 5rem; border: 1px solid #ccc; margin: 0.5rem;}

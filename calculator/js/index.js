@@ -19,14 +19,12 @@ const onClickNumber = (number) => () => { //함수안에 함수를 return한다 
     if(!operator){ //사칙연산이 존재하는가
       numOne += number;
       $result.value += number;
-      console.log(typeof numOne)
       return;
     }
     if(!numTwo) { // 2번째 숫자가 존재하지 않는가?
       $result.value = ''; //맞으면 result의 value 값이 빈값으로 넣기
     }
     numTwo += number;
-    console.log(typeof numTwo)
     $result.value += number;
 }
 const onClickOperator = (e) => { //고차함수 사용하지 않고 중복 제거 //사칙연산 입력하는 함수 제작
@@ -93,3 +91,9 @@ document.querySelector('#clac').addEventListener('click',onClickCalc);
 document.querySelector('#clear').addEventListener('click',onClickClear);
 
 
+/*
+1. 단순계산 (a+b=c);
+2. 다중계산 (a+b-c*d/e=f)
+3. 우선계산 (()괄호 안에 들어가있는 숫자를 우선 순위에 넣기)
+4. -a 사용하기
+*/
