@@ -11,7 +11,7 @@ a, del, s, u {text-decoration: none;}
 em, i {font-style:normal}
 ol, ul, li {list-style:none;}
 table, tr, td {border-collapse:unset;}
-input {border:0; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+input {border:0; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: unset;}
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 input[type='number'] {-moz-appearance: textfield;}
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p, div, img, span, a, em {
 }
 
 /* 클래스 속성 */
-.hide {display: none;}
+.hide {display: none !important;}
 
 /* 반응형 */
 @media screen and (max-width:768px) {

@@ -1,0 +1,70 @@
+#wrap {display: flex;flex-flow: column; min-width: 360px; width: 90%; max-width: 360px; min-height: 400px; height: 500px; background: #ecf3f5; margin: 5rem auto 0; border-radius: 1rem;}
+#wrap .recordZone {min-height: 20%;display: flex; flex-flow: column; height: calc(20% - 4rem); }
+#wrap .recordZone  > * {margin: 2rem 2rem 0; height: 100%; border-radius: 1rem;}
+#wrap .recordZone #record {background: #fff; min-height: calc(20% - 5rem); margin-top: 2rem; height: 100%; display: flex; flex-flow: column; align-items: flex-end; padding: 1rem;}
+#wrap .recordZone #record span{ font-size: 1.4rem; line-height: 1.2;}
+#wrap .recordZone #record span.result{}
+#wrap .recordZone #calc {background: #fff; text-indent: 1rem; font-size: 3rem; font-weight: 800; color:#0f1649; outline: none; text-align: right; padding: 0 1rem ;}
+#wrap .calculator {display: flex; flex-flow: column; justify-content: space-around; min-height: 80%; padding: 1.5rem;}
+#wrap .calculator .row {display: flex; justify-content: space-between; height: 100%;}
+#wrap .calculator .row:last-child {}
+#wrap .calculator .row:last-child > * {width: 50%;}
+#wrap .calculator .row button {width: 33%; text-align: center; border: 2px solid #000; min-height: 20%; margin: 0.5rem; border-radius:2rem; font-size: 2rem; font-weight: 800;}
+#wrap .calculator .row button#num-0 {}
+#wrap .calculator .row button#num-0:hover {background: #69accb;}
+#wrap .calculator .row button#num-1 {}
+
+#wrap .calculator .row button#num-2 {}
+#wrap .calculator .row button#num-3 {}
+#wrap .calculator .row button#num-4 {}
+#wrap .calculator .row button#num-5 {}
+#wrap .calculator .row button#num-6 {}
+#wrap .calculator .row button#num-7 {}
+#wrap .calculator .row button#num-8 {}
+#wrap .calculator .row button#num-9 {}
+#wrap .calculator .row button#plus {}
+#wrap .calculator .row button#minus {}
+#wrap .calculator .row button#multi {}
+#wrap .calculator .row button#devide {}
+#wrap .calculator .row button#lBracket {}
+#wrap .calculator .row button#rBracket {}
+#wrap .calculator .row button#calculate {}
+#wrap .calculator .row button#clear {}
+
+/* 배경색 */
+#wrap .calculator .row button#num-1:hover,
+#wrap .calculator .row button#num-1:active { background: #f9c8c8;}
+#wrap .calculator .row button#num-2:hover,
+#wrap .calculator .row button#num-2:active,
+#wrap .calculator .row button#num-4:hover,
+#wrap .calculator .row button#num-4:active { background: #f9ddc8;}
+#wrap .calculator .row button#num-3:hover,
+#wrap .calculator .row button#num-3:active,
+#wrap .calculator .row button#num-5:hover,
+#wrap .calculator .row button#num-5:active,
+#wrap .calculator .row button#num-7:hover,
+#wrap .calculator .row button#num-7:active { background: #f9f3c8;}
+#wrap .calculator .row button#plus:hover,
+#wrap .calculator .row button#plus:active,
+#wrap .calculator .row button#num-6:hover,
+#wrap .calculator .row button#num-6:active,
+#wrap .calculator .row button#num-8:hover,
+#wrap .calculator .row button#num-8:active,
+#wrap .calculator .row button#lBracket:hover,
+#wrap .calculator .row button#lBracket:active { background: #d7f9c8;}
+#wrap .calculator .row button#minus:hover,
+#wrap .calculator .row button#minus:active,
+#wrap .calculator .row button#num-9:hover,
+#wrap .calculator .row button#num-9:active,
+#wrap .calculator .row button#num-0:hover,
+#wrap .calculator .row button#num-0:active { background: #c8f3f9;}
+#wrap .calculator .row button#multi:hover,
+#wrap .calculator .row button#multi:active,
+#wrap .calculator .row button#rBracket:hover,
+#wrap .calculator .row button#rBracket:active { background: #c8d4f9;}
+#wrap .calculator .row button#devide:hover,
+#wrap .calculator .row button#devide:active { background: #dbc8f9;}
+#wrap .calculator .row button#clear:hover,
+#wrap .calculator .row button#clear:active { background: #f9c8f3;}
+#wrap .calculator .row button#calculate:hover,
+#wrap .calculator .row button#calculate:active { background: #f9c8dd;}
