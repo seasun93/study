@@ -30,11 +30,9 @@ const midTotal = ()=>{
     return expElem;
 }
 $calculate.addEventListener('click',()=>{
-    $calc.value = '';
     let f = midTotal(); //전체 식
     f= f.replace(/(\s*)/g, ""); // 공백제거
-
-    console.log('----------------클릭-------------------');
+    //onsole.log('----------------클릭-------------------');
     for(let i=0; i<f.length; i++){
         const char = f.charAt(i);
         switch(char){
@@ -120,6 +118,8 @@ $calculate.addEventListener('click',()=>{
     $record.innerHTML ='<span>'+ f +'</span><span class="result"> ='+ backStack + '</span>';
     //-----------child 추가 끝----------------    
     clear();
+    $record.classList.remove('hide');
+    $calc.classList.add('hide');
 });
 
 //버튼 클릭 시 성격 나누기
@@ -131,12 +131,8 @@ document.querySelector(`#clear`).addEventListener('click',()=>{
 //연산자 + 괄호
 const opeFct = (e) => {
     let ope = e.target.textContent;
-    if(typeof expression[expression.length-1] == 'string' || typeof expression[expression.length-1] == 'undefined'){
-        alert('숫자를 입력해주세요');
-    } else {
-        $calc.value += ope;
-        expression.push(ope);
-    }
+    $calc.value += ope;
+    expression.push(ope);
 }
 //숫자
 const  numFct = (e)=>{
@@ -184,5 +180,6 @@ const clear = () => {
     stack = []; // 스택 배열
     convert = []; // 후위 배열
     temp = '';
+    $calc.className = '';
     $record.className = 'hide';
 }

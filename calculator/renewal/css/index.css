@@ -1,9 +1,9 @@
 #wrap {display: flex;flex-flow: column; min-width: 360px; width: 90%; max-width: 360px; min-height: 400px; height: 500px; background: #ecf3f5; margin: 5rem auto 0; border-radius: 1rem;}
 #wrap .recordZone {min-height: 20%;display: flex; flex-flow: column; height: calc(20% - 4rem); }
 #wrap .recordZone  > * {margin: 2rem 2rem 0; height: 100%; border-radius: 1rem;}
-#wrap .recordZone #record {background: #fff; min-height: calc(20% - 5rem); margin-top: 2rem; height: 100%; display: flex; flex-flow: column; align-items: flex-end; padding: 1rem;}
-#wrap .recordZone #record span{ font-size: 1.4rem; line-height: 1.2;}
-#wrap .recordZone #record span.result{}
+#wrap .recordZone #record {background: #fff; min-height: calc(20% - 5rem); margin-top: 2rem; height: 100%; display: flex; flex-flow: column; justify-content: space-between; align-items: flex-end; padding: 1rem;}
+#wrap .recordZone #record span{font-size: 1.6rem; line-height: 1.2;}
+#wrap .recordZone #record span.result{font-size: 3rem; font-weight: 800;}
 #wrap .recordZone #calc {background: #fff; text-indent: 1rem; font-size: 3rem; font-weight: 800; color:#0f1649; outline: none; text-align: right; padding: 0 1rem ;}
 #wrap .calculator {display: flex; flex-flow: column; justify-content: space-around; min-height: 80%; padding: 1.5rem;}
 #wrap .calculator .row {display: flex; justify-content: space-between; height: 100%;}
