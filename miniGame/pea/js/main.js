@@ -10,7 +10,7 @@ let randStandByPea = standByPea.fill().map((el, i)=>{
     let randPea = Math.floor(Math.random(standByPea.length) * 3);
     return randPea;
 })
-console.log(randStandByPea)
+//console.log(randStandByPea)
 const standBy = document.querySelector('.standBy');
 for(let i =0; i<randStandByPea.length; i++){
     const createSpan = document.createElement('span');
@@ -20,7 +20,7 @@ for(let i =0; i<randStandByPea.length; i++){
 }
 
 //center 랜덤함수넣기
-const center = document.querySelector('.center');
+const center = document.querySelector('#center span');
 center.className = `num-${randStandByPea[0]}`;
 center.textContent = randStandByPea[0];
 
@@ -53,25 +53,27 @@ window.addEventListener("keydown", (e) => {
     }
 });
 
-timer();
+endTimer();
 function arrowBtnKey(value){
     let valueBtn = value;
     const fever = document.querySelector('#fever');
     if(valueBtn == center.className) {
-        console.log('일치');
+        //console.log('일치');
         comboNum += 1;
-        console.log(fever)
-        if(scoreNum%200 == 0 && (feverNum <= 0 || feverNum < 21)){
-            if(feverNum == 20){
-                feverNum ='';
-            } else {
-                feverNum += 20;
-            }
-            fever.className = '';
-        } else {
-            fever.className ='hide';
+        // 피버 조건  :: 300점마다 한번씩 10번동안 10점에서 15점으로 증가,
+        if(scoreNum%300 == 0 && score.textContent != 0 && feverNum == 0){
+            feverNum += 1;
+        }
+        if(feverNum > 0 && feverNum < 10) {
+            feverNum += 1;
+            scoreNum += 15;
+        } else if(feverNum == 10) {
+            feverNum = 0;
+            scoreNum += 15;
+        } else if(feverNum == 0) {
             scoreNum += 10;
-        }        
+        }
+        
         combo.textContent = comboNum;
         score.textContent = scoreNum;
         //첫번째 배열에서 제거
@@ -80,30 +82,30 @@ function arrowBtnKey(value){
         let randPea = Math.floor(Math.random(standByPea.length) * 3);
         randStandByPea.push(randPea);
         //center 변경된 값 수정하기
-        center.className = `num-${randStandByPea[0]}`;
+        center.className =`num-${randStandByPea[0]}`;
         center.textContent = randStandByPea[0];
         //변경된배열값 수정하기.
         const listNum = document.querySelectorAll('.standBy span');
         for (let i = 0; i<randStandByPea.length; i++){
             listNum[i].textContent= randStandByPea[i+1];
+            listNum[i].className = 'num-'+randStandByPea[i+1];
         }
         //
-
     } else {
-        console.log('버튼 불일치');
+        //console.log('버튼 불일치');
         //콤보제거
         comboNum = 0;
         combo.textContent = comboNum;
     }
 }
 
-function timer(){
+function endTimer(){
     setTimeout(()=>{
         //index.html로 보내기
         //window.location = window.origin + '/study/miniGame/pea/index.html';
         alert('당신의 점수는' + scoreNum + '점입니다. 잠시후 시작화면으로 돌아갑니다.');
         setTimeout(()=>{
             window.location = window.origin + '/miniGame/pea/index.html';
-        },3000)
-    },10000);
+        },1000)
+    },90000);
 }
