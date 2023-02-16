@@ -12,17 +12,17 @@ let randStandByPea = standByPea.fill().map((el, i)=>{
 })
 //console.log(randStandByPea)
 const standBy = document.querySelector('.standBy');
-for(let i =0; i<randStandByPea.length; i++){
+for(let i =0; i<randStandByPea.length - 1; i++){
     const createSpan = document.createElement('span');
     const listPea = standBy.appendChild(createSpan);
     listPea.className = `num-${randStandByPea[i+1]}`;
-    listPea.textContent = randStandByPea[i+1];
+    listPea.innerHTML = `<img src="./img/rabbit-${randStandByPea[i+1]}.png" alt="토끼">`;
 }
 
 //center 랜덤함수넣기
 const center = document.querySelector('#center span');
 center.className = `num-${randStandByPea[0]}`;
-center.textContent = randStandByPea[0];
+center.innerHTML = `<img src="./img/rabbit-${randStandByPea[0]}.png" alt="토끼">`;
 
 //비교대상
 //center.className == valueBtn
@@ -65,11 +65,14 @@ function arrowBtnKey(value){
             feverNum += 1;
         }
         if(feverNum > 0 && feverNum < 10) {
+            fever.className = 'animation';
             feverNum += 1;
             scoreNum += 15;
         } else if(feverNum == 10) {
+            fever.className = 'animation';
             feverNum = 0;
             scoreNum += 15;
+            fever.className = 'animationOut';
         } else if(feverNum == 0) {
             scoreNum += 10;
         }
@@ -81,16 +84,17 @@ function arrowBtnKey(value){
         //새로운 랜덤수 배열에 넣기
         let randPea = Math.floor(Math.random(standByPea.length) * 3);
         randStandByPea.push(randPea);
+        console.log(randStandByPea)
         //center 변경된 값 수정하기
         center.className =`num-${randStandByPea[0]}`;
-        center.textContent = randStandByPea[0];
+        center.innerHTML = `<img src="./img/rabbit-${randStandByPea[0]}.png" alt="토끼">`;
         //변경된배열값 수정하기.
         const listNum = document.querySelectorAll('.standBy span');
-        for (let i = 0; i<randStandByPea.length; i++){
-            listNum[i].textContent= randStandByPea[i+1];
-            listNum[i].className = 'num-'+randStandByPea[i+1];
+        
+        for (let i = 0; i<randStandByPea.length-1; i++){
+            listNum[i].className = `num-${randStandByPea[i+1]}`;
+            listNum[i].innerHTML = `<img src="./img/rabbit-${randStandByPea[i+1]}.png" alt="토끼">`;
         }
-        //
     } else {
         //console.log('버튼 불일치');
         //콤보제거
@@ -105,7 +109,8 @@ function endTimer(){
         //window.location = window.origin + '/study/miniGame/pea/index.html';
         alert('당신의 점수는' + scoreNum + '점입니다. 잠시후 시작화면으로 돌아갑니다.');
         setTimeout(()=>{
-            window.location = window.origin + '/miniGame/pea/index.html';
+            //window.location = window.origin + '/miniGame/rabbit/index.html'; // live 확인용
+            window.location = window.origin + '/study/miniGame/rabbit/index.html'; //깃허브용
         },1000)
     },90000);
 }
