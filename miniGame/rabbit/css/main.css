@@ -12,6 +12,8 @@
 #wrap #combo > * {font-size: 3rem; color:#333; font-family: 'TmoneyRoundWind'; font-weight: 800;}
 #wrap #combo em {color:#cc7b57;}
 #wrap #combo span {}
+#wrap #time {position: absolute; right: 1rem; top:6rem; z-index: 100;}
+#wrap #time > * {color: #fff; font-size: 3rem; font-family: 'TmoneyRoundWind'; font-weight: 800;}
 #wrap .rabbitZone {position: fixed; left: 0; top:0; right: 0; display: flex; justify-content: flex-end; flex-flow: column; align-items: center; min-height: calc(100% - 105px);background: url(../img/background.png) no-repeat center / cover;}
 #wrap .rabbitZone #center {order:2; z-index: 100;height: 125px;}
 #wrap .rabbitZone #center span {display: block; height: 100%;}

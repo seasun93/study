@@ -52,7 +52,17 @@ window.addEventListener("keydown", (e) => {
         arrowBtnKey('num-2');
     }
 });
-
+let timeZone = document.querySelector('#time em');
+let t = 90;
+timeZone.textContent = t;
+const timeHandler = ()=>{
+    t= t-1;
+    if(t == 0) {
+        clearInterval(limitTime);
+    }
+    timeZone.textContent = t;
+}
+const limitTime = setInterval(timeHandler,1000);
 endTimer();
 function arrowBtnKey(value){
     let valueBtn = value;
@@ -101,6 +111,7 @@ function arrowBtnKey(value){
         comboNum = 0;
         combo.textContent = comboNum;
     }
+
 }
 
 function endTimer(){
