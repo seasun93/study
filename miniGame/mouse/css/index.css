@@ -1,0 +1,14 @@
+#wrap {display: flex; flex-flow: column; align-items: center; width: 100%; margin: auto; position: relative; }
+#wrap #titleWrap {text-align: center; font-size: 5rem; font-weight: 800; padding: 5rem 0 2rem;}
+#wrap #subTitle {font-size:2rem; margin-bottom: 5rem;}
+#wrap #note {font-size:1.4rem; border: 1px solid #ccc; padding: 0.5rem;  width: 10rem; border-radius:0.5rem; position: absolute; right: 1rem; top:1rem;}
+#wrap a { font-size:2rem; position: relative; padding: 1rem; border-radius:0.5rem; overflow: hidden;}
+#wrap a::before {content:''; display: block; width: 0; height: 100%; background: linear-gradient(90deg, #76c695, #9ad279); position: absolute; left: 0; top:0; z-index: -1; color:#333}
+#wrap a:hover {color: #fff;}
+#wrap a:hover::before {width: 100%;}
+#wrap .noteZone {position: fixed; width:  90%; height: 300px; left: 50%; transform: translateX(-50%); top:5rem; background: #fff; border:1px solid #ccc; padding: 3rem; display: none; font-size: 1.8rem;}
+#wrap .noteZone span {font-size:1.8rem; font-weight: 800;}
+#wrap .noteZone span.timeLimit {color:#dc3232;}
+#wrap .noteZone span.arrow {color:#65c963;}
+#wrap .noteZone.on {display: block;}
+#wrap .noteZone #close {padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.5rem; position: absolute; right: 1rem; bottom:1rem; font-size: 1.4rem;}

@@ -20,7 +20,7 @@ input[type='password']::-ms-clear {display: none;}
 input::-ms-clear { display: none; }
 select {-webkit-appearance: none;-moz-appearance: none; appearance: none;}
 select::-ms-expand { display: none; }
-button {cursor:pointer; background: none; border:0;}
+button {cursor:pointer; background: unset; border:0; outline: none;}
 pre { white-space: pre-line;}
 
 /* IOS 선택 비활성화 */
